@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" />
+
+    <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.5" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+
+  	<div id ='main'>
+        <div class="jumbotron animated fadeInDown" style="background-color:#6200ad;color:white;background-image:url('galaxy.jpg')">
+            <div class="container container-fluid">
+              	<button class='btn btn-warning' onclick='mute()'>Mute</button>
+                <h2>Put the items in order from 1 - 15</h2>
+              <p>1 being the most important</p>
+            </div>
+        </div>
+        <div class = 'container container-fluid animated fadeIn'>
+          <ul class="list-group" id='sortable'>
+            <li class="list-group-item" onmousedown = 'sound(one);' id='one'>
+              <span class="badge" id = 'rank'>1</span>
+              <span class = 'name'>Box of Matches</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound(two);' id='two'>
+              <span class="badge" id = 'rank'>2</span>
+              <span class = 'name'>Food Concentrate</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound(three);' id='three'>
+              <span class="badge" id = 'rank'>3</span>
+              <span class = 'name'>50 feet of nylon rope </span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound(four);' id='four'>
+              <span class="badge" id = 'rank'>4</span>
+              <span class = 'name'>Parachute silk</span
+            ></li>
+            <li class="list-group-item" onmousedown = 'sound(five);' id='five'>
+              <span class="badge" id = 'rank'>5</span>
+              <span class = 'name'>Two .45 caliber pistols</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound(six);' id='six'>
+              <span class="badge" id = 'rank'>6</span>
+              <span class = 'name'>1 case of dehydrated milk</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound(seven);' id='seven'>
+              <span class="badge" id = 'rank'>7</span>
+              <span class = 'name'>Two 100-pound tanks of oxygen</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound(eight);' id='eight'>
+              <span class="badge" id = 'rank'>8</span>
+              <span class = 'name'>Stellar map</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound();'>
+              <span class="badge" id = 'rank'>9</span>
+              <span class = 'name'>Self-inflating life raft</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound();'>
+              <span class="badge" id = 'rank'>10</span>
+              <span class = 'name'>Magnetic compass</span>
+             
+            </li>
+            <li class="list-group-item" onmousedown = 'sound()'>
+              <span class="badge" id = 'rank'>11</span>
+              <span class = 'name'>Five gallons of water</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound()'>
+              <span class="badge" id = 'rank'>12</span>
+              <span class = 'name'>Signal flares</span>
+            </li>
+             <li class="list-group-item" onmousedown = 'sound()'>
+              <span class="badge" id = 'rank'>13</span>
+              <span class = 'name'>First aid kit containing injection needles</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound()'>
+              <span class="badge" id = 'rank'>14</span>
+              <span class = 'name'>Solar powered FM receiver</span>
+            </li>
+            <li class="list-group-item" onmousedown = 'sound()'>
+              <span class="badge" id = 'rank'>15</span>
+              <span class = 'name'>Portable heating unit</span>
+            </li>
+          </ul>
+          <button class='btn btn-lg btn-primary pull-right'  style = 'background-image:url("butn.jpg"); 'onclick='submit();'>Launch</button>
+        </div>
+    </div>
+    <div id='results' hidden>
+        <div class="jumbotron animated fadeInDown" style="background-color:#6200ad;color:white;background-image:url('galaxy.jpg')">
+            <div class="container container-fluid">
+              	<button class='btn btn-warning' onclick='mute()'>Mute</button>
+                <h2>Lets see how you did!</h2>
+                <p>Comapare your score to the actual NASA Score</p>
+            </div>
+        </div>
+        <div class="container">
+        	<div class="row">
+            	<div class='col-md-6'>
+                	<div class="panel panel-default">
+                      <!-- Default panel contents -->
+                      <div class="panel-heading">Your Rankings</div>
+                    
+                      <!-- Table -->
+                      <table class="table">
+                        ...
+                      </table>
+                    </div>
+                </div>
+       
+            	<div class='col-md-6'>
+                	<div class="panel panel-default">
+                      <!-- Default panel contents -->
+                      <div class="panel-heading">Nasa Rankings</div>
+                    
+                      <!-- Table -->
+                      <table class="table">
+                        <thead>
+                        	<td>Item</td>
+                            <td>Rank</td>
+                        </thead>
+                        <tbody>
+                        	
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <audio src='pickupanddrop.wav' id='pick'/>
+    <audio src='explosion.wav' id='drop'/>
+    <audio src='coin.wav' id='coin'/>
+    <audio src='music.wav' id='music' controls autoplay loop/>
+  </body>
+
+</html>

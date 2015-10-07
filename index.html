@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" />
+    <link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="htpp://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.css" />
+	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <style>
+     @-webkit-keyframes Background {
+        from { background-rotation: 0; }
+        to { background-rotation: 360; }
+      }
+     .menu{
+		 font-family: "Orbitron", sans-serif;
+		  sans-serif;color:white;background-image:url("space-4.jpg");
+       -webkit-animation: Background linear 5s infinite;
+       background-rotation: 50px;
+     }
+    </style>
+    <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.5" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.5" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body style='' class='menu'>
+	<div class='container'>
+    	<div style='margin-top:250px' id='start'>
+        	<h1 style='font-size:60px' class='animated bounceInDown'>Nasa Moon Landing Simulator</h1>
+            <h2 class='animated fadeInLeft'>Will you survive?</h2>
+            <button class="btn btn-success animated fadeInLeft" onclick="letsgo()">LETS FIND OUT</button>
+            <a href='http://www.cachemonet.com'>&nbsp<button class="btn btn-danger animated fadeInLeft">OH GAWD TAKE ME BACK</button></a>
+        </div>
+        <div style='margin-top:250px' id='story' hidden>
+            <h1 class='animated fadeInLeft'>The Story</h1>
+            <h3>
+                &nbsp&nbsp&nbsp&nbspYou are a member of a space crew scheduled to rendezvous with a mother ship on 
+                the lighted surface of the moon. However, due to mechanical difficulties, your own 
+                ship was forced to land at a spot 200 miles from the rendezvous point.  
+                During re-entry and landing, much of the equipment 
+                aboard was damaged and, since 
+                survival depends on reaching the mother ship, the most critical items available must 
+                be chosen for the 200-mile trip.  
+                15 items are listed as being intact and undamaged after landing. Your task is to rank 
+                them in terms of their importance for your crew, to
+                allow them to reach the 
+                rendezvous point. Place the number 1 by the most im
+                portant item, the number 2 by 
+                the second most important, and so on through to number 15 for the least important.  
+            </h3><br>
+            <button class="btn btn-lg btn-danger animated fadeInLeft" onclick="letsgo()">Back</button>
+            <a href="main.html"><button class="btn btn-lg btn-success animated fadeInLeft" onclick="letsgoback()">Continue</button></a>
+        </div>
+    </div>
+    <script>
+		function letsgo(){
+			$('#start').hide(500);
+			$('#story').show(500);
+		}
+		function letsgoback(){
+			$('#story').hide(500);
+			$('#start').show(500);
+		}
+	</script>
+</body>
+
+</html>
