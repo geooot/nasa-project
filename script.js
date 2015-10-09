@@ -1,6 +1,25 @@
 var toggle = true;
 var selector = "";
 var list = [];
+var nasa_ranks = ['Two 100 lb. tanks of oxygen', '5 gallons of water','Stellar map','Food Concentrate','Solar-powered FM receiver-transmitter','50 feet of nylon rope','First aid kit, including injection needle','Parachute silk','Self-inflating life raft','Signal flares','Two .45 caliber pistols', 'One case of dehydrated milk','Portable heating unit','Magnetic compass','Box of matches'];
+
+var nasa ={
+	'Two 100 lb. tanks of oxygen':1,
+	'5 gallons of water':2,
+	'Stellar map':3,
+	'Food Concentrate':4,
+	'Solar-powered FM receiver-transmitter':5,
+	'50 feet of nylon rope':6,
+	'First aid kit, including injection needle':7,
+	'Parachute silk':8,
+	'Self-inflating life raft':9,
+	'Signal flares':10,
+	'Two .45 caliber pistols':11,
+	'One case of dehydrated milk':12,
+	'Portable heating unit':13,
+	'Magnetic compass':14,
+	'Box of matches':15
+};
 function updateRank(){
   $('.badge').each(function(i){
       $(this).text(i+1);
@@ -25,6 +44,28 @@ function submit(){
     	list.push($(this).text());
 	});
 	$('#main').hide(500);
+	var count = 1;
+	var score = 0;
+	for(var val in list){
+		var isWrong = '';
+		var name = '';
+		name = list[val];
+		var difference = nasa[name] - count;
+		score += Math.abs(difference);
+		console.log(difference, score);
+		if(list[val] == nasa_ranks[val]){
+			isWrong = 'success';
+		}
+		$('#your').append('<tr class='+isWrong+'><td>'+list[val]+'</td><td>'+count+'</td></tr>');
+		count+=1;
+	}
+	$('#score').text(score);
+	
+	count=1;
+	for(var th in nasa_ranks){
+		$('#nasa').append('<tr><td>'+nasa_ranks[th]+'</td><td>'+count+'</td></tr>');
+		count+=1;
+	}
 	$('#results').show(500);
 }
 function drop(){

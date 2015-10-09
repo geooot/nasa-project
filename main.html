@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<!-- HELLO -->
   <head>
     <link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" />
@@ -27,7 +27,7 @@
           <ul class="list-group" id='sortable'>
             <li class="list-group-item" onmousedown = 'sound(one);' id='one'>
               <span class="badge" id = 'rank'>1</span>
-              <span class = 'name'>Box of Matches</span>
+              <span class = 'name'>Box of matches</span>
             </li>
             <li class="list-group-item" onmousedown = 'sound(two);' id='two'>
               <span class="badge" id = 'rank'>2</span>
@@ -35,7 +35,7 @@
             </li>
             <li class="list-group-item" onmousedown = 'sound(three);' id='three'>
               <span class="badge" id = 'rank'>3</span>
-              <span class = 'name'>50 feet of nylon rope </span>
+              <span class = 'name'>50 feet of nylon rope</span>
             </li>
             <li class="list-group-item" onmousedown = 'sound(four);' id='four'>
               <span class="badge" id = 'rank'>4</span>
@@ -47,11 +47,11 @@
             </li>
             <li class="list-group-item" onmousedown = 'sound(six);' id='six'>
               <span class="badge" id = 'rank'>6</span>
-              <span class = 'name'>1 case of dehydrated milk</span>
+              <span class = 'name'>One case of dehydrated milk</span>
             </li>
             <li class="list-group-item" onmousedown = 'sound(seven);' id='seven'>
               <span class="badge" id = 'rank'>7</span>
-              <span class = 'name'>Two 100-pound tanks of oxygen</span>
+              <span class = 'name'>Two 100 lb. tanks of oxygen</span>
             </li>
             <li class="list-group-item" onmousedown = 'sound(eight);' id='eight'>
               <span class="badge" id = 'rank'>8</span>
@@ -64,11 +64,10 @@
             <li class="list-group-item" onmousedown = 'sound();'>
               <span class="badge" id = 'rank'>10</span>
               <span class = 'name'>Magnetic compass</span>
-             
             </li>
             <li class="list-group-item" onmousedown = 'sound()'>
               <span class="badge" id = 'rank'>11</span>
-              <span class = 'name'>Five gallons of water</span>
+              <span class = 'name'>5 gallons of water</span>
             </li>
             <li class="list-group-item" onmousedown = 'sound()'>
               <span class="badge" id = 'rank'>12</span>
@@ -76,11 +75,11 @@
             </li>
              <li class="list-group-item" onmousedown = 'sound()'>
               <span class="badge" id = 'rank'>13</span>
-              <span class = 'name'>First aid kit containing injection needles</span>
+              <span class = 'name'>First aid kit, including injection needle</span>
             </li>
             <li class="list-group-item" onmousedown = 'sound()'>
               <span class="badge" id = 'rank'>14</span>
-              <span class = 'name'>Solar powered FM receiver</span>
+              <span class = 'name'>Solar-powered FM receiver-transmitter</span>
             </li>
             <li class="list-group-item" onmousedown = 'sound()'>
               <span class="badge" id = 'rank'>15</span>
@@ -107,7 +106,14 @@
                     
                       <!-- Table -->
                       <table class="table">
-                        ...
+                        <thead>
+                        	<tr>
+                        		<th>Item</th>
+                            	<th>Rank</th>
+                            </tr>
+                        </thead>
+                        <tbody id='your'>
+                        </tbody>
                       </table>
                     </div>
                 </div>
@@ -120,17 +126,24 @@
                       <!-- Table -->
                       <table class="table">
                         <thead>
-                        	<td>Item</td>
-                            <td>Rank</td>
+                        	<tr>
+                        		<th>Item</th>
+                            	<th>Rank</th>
+                            </tr>
                         </thead>
-                        <tbody>
-                        	
+                        <tbody id='nasa'>
                         </tbody>
                       </table>
                     </div>
                 </div>
             </div>
+            <div class='row'>
+            	<div class='jumbotron'>
+                	<h1>Your Score: <span id='score'></span></h1>
+                </div>
             </div>
+            </div>
+            
         </div>
     </div>
     <audio src='pickupanddrop.wav' id='pick'/>
