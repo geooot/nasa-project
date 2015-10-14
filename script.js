@@ -57,12 +57,36 @@ function submit(){
 		console.log(difference, score);
 		if(list[val] == nasa_ranks[val]){
 			isWrong = 'success';
+		}else{
+			isWrong = 'danger';
 		}
 		$('#your').append('<tr class='+isWrong+'><td>'+list[val]+'</td><td>'+count+'</td></tr>');
 		count+=1;
 	}
+	console.log(score)
 	$('#score').text(score);
-	
+	var text = '';
+	switch(score) {
+		case (score<=25):
+			text = 'Excellent: You and your crew demonstrate great survival skills!';
+			break;
+		case (score >=26 && score <=32):
+			text = 'Good: Above average results. Yes, you made it!';
+			break;
+		case (score >=33 && score<=45):
+			text = 'Average: It was a struggle, but you made it in the end!';
+			break;
+		case (score>=46 && score<=55):
+			text = 'Fair: At least you’re still alive, but only just!';
+			break;
+		case (score>=56 && score<70):
+			text = 'Poor: Sadly not everyone made it back to the mother ship!';
+			break;
+		case (score >=71):
+			text = 'Very poor: Oh dear, your bodies lie lifeless on the surface of the moon!';
+			break; 
+	}
+	$('#message').text(text);
 	count=1;
 	for(var th in nasa_ranks){
 		$('#nasa').append('<tr><td>'+nasa_ranks[th]+'</td><td>'+count+'</td></tr>');

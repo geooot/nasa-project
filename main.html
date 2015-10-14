@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class = 'container container-fluid animated fadeIn'>
-          <ul class="list-group" id='sortable'>
+          <ul class="list-group" id='sortable' style="cursor:pointer">
             <li class="list-group-item" onmousedown = 'sound(one);' id='one'>
               <span class="badge" id = 'rank'>1</span>
               <span class = 'name'>Box of matches</span>
@@ -102,7 +102,7 @@
             	<div class='col-md-6'>
                 	<div class="panel panel-default">
                       <!-- Default panel contents -->
-                      <div class="panel-heading">Your Rankings</div>
+                      <div class="panel-heading"><h3><strong>Your Rankings</strong></h3></div>
                     
                       <!-- Table -->
                       <table class="table">
@@ -121,7 +121,7 @@
             	<div class='col-md-6'>
                 	<div class="panel panel-default">
                       <!-- Default panel contents -->
-                      <div class="panel-heading">Nasa Rankings</div>
+                      <div class="panel-heading"><h3><strong>Nasa Rankings</strong></h3></div>
                     
                       <!-- Table -->
                       <table class="table">
@@ -139,7 +139,10 @@
             </div>
             <div class='row'>
             	<div class='jumbotron'>
-                	<h1>Your Score: <span id='score'></span></h1>
+                	<h3>Your Score: <span id='score'></span></h3>
+                    <div class='well'>
+                    	<p id='messaqe'></p>
+                    </div>
                 </div>
             </div>
             </div>
