@@ -17,14 +17,15 @@
 		   -webkit-animation: Background linear 5s infinite;
 		   background-rotation: 50px;
 		}
-		.bg-danger {
-			background-color: #f2dede !important;
-		}
-		.bg-warning {
-			background-color: #fcf8e3 !important;
-		}
-		.bg-success {
-			background-color: #dff0d8 !important;
+		iframe {
+		  position: fixed;
+		  top: 50%; left: 50%;
+		  z-index: 1;
+		  min-width: 100%;
+		  min-height: 100%;
+		  width: auto;
+		  height: auto;
+		  transform: translate(-50%, -50%);
 		}
     </style>
     <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -36,7 +37,8 @@
 </head>
 
 <body style='' class='menu'>
-	<div class='container'>
+	
+	<div class='container' style="z-index:99; position:relative">
     	<div style='margin-top:250px' id='start'>
         	<h1 style='font-size:60px' class='animated bounceInDown'>Nasa Moon Landing Simulator</h1>
             <h2 class='animated fadeInLeft'>Will you survive?</h2>
@@ -64,6 +66,8 @@
             <a href="main.html"><button class="btn btn-lg btn-success animated fadeInLeft" onclick="letsgoback()">Continue</button></a>
         </div>
     </div>
+    <div style='backround-color:rgb(255,255,255,0.5); postion:fixed;width=100%;height:100%;'></div>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/njCDZWTI-xg?autoplay=1&showinfo=0&controls=0" frameborder="0" allowfullscreen >
     <script>
 		function letsgo(){
 			$('#start').hide(500);

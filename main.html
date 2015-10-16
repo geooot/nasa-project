@@ -30,10 +30,19 @@
 		.bg-success {
 			background-color: #dff0d8 !important;
 		}
+		.bg{
+			-webkit-animation: Background linear 10s infinite;
+			background-image:url("geometry.png");
+			background-position: 0px 0px;
+		}
+		@-webkit-keyframes Background {
+			from { background-position: 0 0; }
+			to { background-position: 100% 100%; }
+		 }
 	</style>
   </head>
 
-  <body>
+  <body class='bg'>
 
   	<div id ='main'>
         <div class="jumbotron animated fadeInDown" style="background-color:#6200ad;color:white;background-image:url('galaxy.jpg')">
@@ -159,7 +168,7 @@
             </div>
             <div class='row'>
             	<div class='jumbotron'>
-                	<h2>Your Score: <b><span id='score'></span></b></h2>
+                	<h2>Your Score: <b><span id='score'></span></b> <small style='color:#333'>lower is better</small></h2>
                     <div class=''>
                     	<p id='messaqe'></p>
                     </div>
