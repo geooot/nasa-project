@@ -11,6 +11,26 @@
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <style>
+		.good{
+			color:green;
+		}
+		.medium{
+			color:rgb(234, 207, 0);
+		}
+		.bad{
+			color:red;
+		}
+		.bg-danger {
+			background-color: #f2dede !important;
+		}
+		.bg-warning {
+			background-color: #fcf8e3 !important;
+		}
+		.bg-success {
+			background-color: #dff0d8 !important;
+		}
+	</style>
   </head>
 
   <body>
@@ -139,8 +159,8 @@
             </div>
             <div class='row'>
             	<div class='jumbotron'>
-                	<h3>Your Score: <span id='score'></span></h3>
-                    <div class='well'>
+                	<h2>Your Score: <b><span id='score'></span></b></h2>
+                    <div class=''>
                     	<p id='messaqe'></p>
                     </div>
                 </div>

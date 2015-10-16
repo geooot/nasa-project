@@ -7,16 +7,25 @@
     <link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="htpp://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.css" />
 	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <style>
-     @-webkit-keyframes Background {
-        from { background-rotation: 0; }
-        to { background-rotation: 360; }
-      }
-     .menu{
-		 font-family: "Orbitron", sans-serif;
-		  sans-serif;color:white;background-image:url("space-4.jpg");
-       -webkit-animation: Background linear 5s infinite;
-       background-rotation: 50px;
-     }
+		@-webkit-keyframes Background {
+		   from { background-rotation: 0; }
+		   to { background-rotation: 360; }
+		}
+		.menu{
+			 font-family: "Orbitron", sans-serif;
+			  sans-serif;color:white;background-image:url("space-4.jpg");
+		   -webkit-animation: Background linear 5s infinite;
+		   background-rotation: 50px;
+		}
+		.bg-danger {
+			background-color: #f2dede !important;
+		}
+		.bg-warning {
+			background-color: #fcf8e3 !important;
+		}
+		.bg-success {
+			background-color: #dff0d8 !important;
+		}
     </style>
     <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script data-require="bootstrap@*" data-semver="3.3.5" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -51,7 +60,7 @@
                 portant item, the number 2 by 
                 the second most important, and so on through to number 15 for the least important.  
             </h3><br>
-            <button class="btn btn-lg btn-danger animated fadeInLeft" onclick="letsgo()">Back</button>
+            <a href = 'index.html'><button class="btn btn-lg btn-danger animated fadeInLeft" >Back</button></a>
             <a href="main.html"><button class="btn btn-lg btn-success animated fadeInLeft" onclick="letsgoback()">Continue</button></a>
         </div>
     </div>

@@ -66,33 +66,44 @@ function submit(){
 	console.log(score)
 	$('#score').text(score);
 	var text = '';
-	switch(score) {
-		case (score<=25):
-			text = 'Excellent: You and your crew demonstrate great survival skills!';
-			break;
-		case (score >=26 && score <=32):
-			text = 'Good: Above average results. Yes, you made it!';
-			break;
-		case (score >=33 && score<=45):
-			text = 'Average: It was a struggle, but you made it in the end!';
-			break;
-		case (score>=46 && score<=55):
-			text = 'Fair: At least you’re still alive, but only just!';
-			break;
-		case (score>=56 && score<70):
-			text = 'Poor: Sadly not everyone made it back to the mother ship!';
-			break;
-		case (score >=71):
-			text = 'Very poor: Oh dear, your bodies lie lifeless on the surface of the moon!';
-			break; 
+	var status = '';
+	var bgstat = '';
+	if(score <= 25){
+		text = 'Excellent: You and your crew demonstrate great survival skills!';
+		bgstat = 'bg-success';
+		status = 'good';
+	}else if(score >=26 && score <=32){
+		text = 'Good: Above average results. Yes, you made it!';
+		bgstat = 'bg-success';
+		status = 'good';
+	}else if(score >=33 && score <=45){
+		text = 'Average: It was a struggle, but you made it in the end!';
+		bgstat = 'bg-warning';
+		status = 'medium';
+	}else if(score >=46 && score <=55){
+		text = 'Fair: At least you’re still alive, but only just!';
+		bgstat = 'bg-warning';
+		status = 'medium';
+	}else if(score >=56 && score <=70){
+		text =  'Poor: Sadly not everyone made it back to the mother ship!';
+		bgstat = 'bg-danger';
+		status = 'bad';
+	}else if(score >= 71){
+		text = 'Very poor: Oh dear, your bodies lie lifeless on the surface of the moon!';
+		bgstat = 'bg-danger';
+		status = 'bad';
 	}
-	$('#message').text(text);
+	
+	console.log("Text: " + text);
 	count=1;
 	for(var th in nasa_ranks){
 		$('#nasa').append('<tr><td>'+nasa_ranks[th]+'</td><td>'+count+'</td></tr>');
 		count+=1;
 	}
 	$('#results').show(500);
+	$('#messaqe').text(text);
+	$('#score').addClass(status);
+	$('.jumbotron').addClass(bgstat);
 }
 function drop(){
   $('#drop').trigger('pause');
