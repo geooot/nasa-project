@@ -17,7 +17,7 @@
 		   -webkit-animation: Background linear 5s infinite;
 		   background-rotation: 50px;
 		}
-		iframe {
+		.bg{
 		  position: fixed;
 		  top: 50%; left: 50%;
 		  z-index: 1;
@@ -66,18 +66,19 @@
             <a href="main.html"><button class="btn btn-lg btn-success animated fadeInLeft" onclick="letsgoback()">Continue</button></a>
         </div>
     </div>
-    <div style='backround-color:rgb(255,255,255,0.5); postion:fixed;width=100%;height:100%;'></div>
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/njCDZWTI-xg?autoplay=1&showinfo=0&controls=0" frameborder="0" allowfullscreen >
-    <script>
-		function letsgo(){
-			$('#start').hide(500);
-			$('#story').show(500);
-		}
-		function letsgoback(){
-			$('#story').hide(500);
-			$('#start').show(500);
-		}
-	</script>
+        <script>
+        function letsgo(){
+            $('#start').hide(500);
+            $('#story').show(500);
+        }
+        function letsgoback(){
+            $('#story').hide(500);
+            $('#start').show(500);
+        }
+    </script>
+    <div class = 'bg' style='background-color:rgba(0,0,0,0.5);z-index:2 !important;'></div>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/P5_GlAOCHyE?t=1m10s&autoplay=1&showinfo=0&controls=0" frameborder="0" allowfullscreen class='bg' >
+
 </body>
 
 </html>
