@@ -39,6 +39,10 @@
 			from { background-position: 0 0; }
 			to { background-position: 100% 100%; }
 		 }
+		 .ui-sortable-placeholder{
+			visibility:inherit !important;
+		 	background-color:rgba(0,0,0,0.2) !important;
+		 }
 	</style>
   </head>
 
@@ -167,12 +171,17 @@
                 </div>
             </div>
             <div class='row'>
-            	<div class='jumbotron'>
+            	<div class='jumbotron' id='resultBox'>
                 	<h2>Your Score: <b><span id='score'></span></b> <small style='color:#333'>lower is better</small></h2>
                     <div class=''>
                     	<p id='messaqe'></p>
                     </div>
+                    
                 </div>
+                <div class="jumbotron">
+                	<a href='main.html' style="color:white;"><button type="button" class="btn btn-success btn-lg btn-block">Test your luck! Try again!</button></a>
+                </div>
+                
             </div>
             </div>
             

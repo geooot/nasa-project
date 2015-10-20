@@ -103,7 +103,7 @@ function submit(){
 	$('#results').show(500);
 	$('#messaqe').text(text);
 	$('#score').addClass(status);
-	$('.jumbotron').addClass(bgstat);
+	$('#resultBox').addClass(bgstat);
 }
 function drop(){
   $('#drop').trigger('pause');
