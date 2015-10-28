@@ -3,7 +3,8 @@ var selector = "";
 var list = [];
 var nasa_ranks = ['Two 100 lb. tanks of oxygen', '5 gallons of water','Stellar map','Food Concentrate','Solar-powered FM receiver-transmitter','50 feet of nylon rope','First aid kit, including injection needle','Parachute silk','Self-inflating life raft','Signal flares','Two .45 caliber pistols', 'One case of dehydrated milk','Portable heating unit','Magnetic compass','Box of matches'];
 $(document).ready(function(){
-document.getElementById("music").volume = 0.25;
+	document.getElementById("music").volume = 0.25;
+
 })
 var nasa ={
 	'Two 100 lb. tanks of oxygen':1,
@@ -100,6 +101,7 @@ function submit(){
 		$('#nasa').append('<tr><td>'+nasa_ranks[th]+'</td><td>'+count+'</td></tr>');
 		count+=1;
 	}
+	$('#resultBox').addClass('');
 	$('#results').show(500);
 	$('#messaqe').text(text);
 	$('#score').addClass(status);
