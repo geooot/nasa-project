@@ -15,6 +15,7 @@
 			 font-family: "Orbitron", sans-serif;
 			  sans-serif;color:white;background-image:url("space-4.jpg");
 		   -webkit-animation: Background linear 5s infinite;
+		   animation: Background linear 5s infinite;
 		   background-rotation: 50px;
 		}
 		.bg{
@@ -67,7 +68,21 @@
             <a href="main.html"><button class="btn btn-lg btn-success animated fadeInLeft" onclick="letsgoback()">Continue</button></a>
         </div>
     </div>
-        <script>
+
+    <div class = 'bg' style='background-color:rgba(0,0,0,0.5);z-index:2 !important;'></div>
+    <div id='frame'>
+    <iframe width="100%" height="100%" src="http://www.ustream.tv/embed/17074538?controls=false&autoplay=true" frameborder="0" allowfullscreen class='bg'></iframe>
+    </div>
+            <script>
+		window.onkeyup = function(e) {
+			var key = e.keyCode ? e.keyCode : e.which;
+			
+			if (key == 38) {
+				$('iframe').remove();
+				$('h4').hide();
+			}
+			
+		}
         function letsgo(){
             $('#start').hide(500);
             $('#story').show(500);
@@ -77,9 +92,6 @@
             $('#start').show(500);
         }
     </script>
-    <div class = 'bg' style='background-color:rgba(0,0,0,0.5);z-index:2 !important;'></div>
-    <iframe width="100%" height="100%" src="http://www.ustream.tv/embed/17074538?controls=false&autoplay=true" frameborder="0" allowfullscreen class='bg'></iframe>
-    
 
 </body>
 
